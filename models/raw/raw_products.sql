@@ -6,5 +6,8 @@
 }}
 
 
+--select * from 
+--RAW.GLOBALMART.PRODUCT
+
 select * from 
-RAW.GLOBALMART.PRODUCT
+{{ source('globalmart', 'product') }}
