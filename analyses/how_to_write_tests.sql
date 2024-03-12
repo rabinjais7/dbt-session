@@ -11,5 +11,5 @@
 
 -- tests and documentations are used in models so you can write in any yml file where model is defined. but its
 -- best practice to refactor big yaml file to small inside folders and right specific test and documentation there
--- start with version : 2 and models: 
+-- start with version : 2 and models and names
 -- start with yaml file under raw folder
