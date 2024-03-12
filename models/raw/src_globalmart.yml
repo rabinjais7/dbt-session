@@ -1,3 +1,10 @@
+
+## how to write sources yml file 
+## version: 2
+## sources:
+## -name ( this is name of first source, it includes your database, schema and tables and columns)
+## once each table name is defined, under same indentation, start adding more attributes like freshness and loadedatfield
+
 version: 2
 
 sources:
@@ -25,6 +32,10 @@ sources:
             count: 2
             period: day
         loaded_at_field: loadedat
+
+# once name is defined, put loadedat and freshness attribute under name in same indentation. start typing loaded and freshness
+
+
               
 
       
