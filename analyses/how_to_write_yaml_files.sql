@@ -1,4 +1,5 @@
 -- in yaml file, either you define source or models
+-- -name and inside name you can include test and description
 -- find all config properties in https://docs.getdbt.com/reference/model-properties
 -- once its defined as source or models, first thing you have to give it name . 
 -- just press dash (-) and press space and it start select from dropdown
