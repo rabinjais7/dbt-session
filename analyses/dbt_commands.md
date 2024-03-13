@@ -1,3 +1,5 @@
+dbt build 
+dbt run
 dbt source freshness
 dbt docs generate
 dbt test 
