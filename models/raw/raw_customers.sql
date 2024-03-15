@@ -5,5 +5,6 @@
 }}
 
 -- select * from RAW.GLOBALMART.CUSTOMER
+
 select * from 
-{{ source('globalmart', 'customer') }}
+{{ source('globalmart', 'customer_example_2') }}
