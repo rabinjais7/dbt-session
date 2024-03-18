@@ -13,6 +13,7 @@ sources:
     schema: globalmart
     tables:
       - name: customer_example_2
+        description: "This source is customer details from our application."
         loaded_at_field: updated_at
         freshness: 
           warn_after:
@@ -21,6 +22,9 @@ sources:
           error_after:
             count: 5
             period: hour
+        columns:
+          - name: customerid
+            description: "this is primary key"
         
       - name: orders
         freshness: 
