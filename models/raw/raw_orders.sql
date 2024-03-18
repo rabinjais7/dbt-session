@@ -1,7 +1,7 @@
 
 {{
     config(
-        materialized='table'
+        materialized='incremental'
     )
 }}
 
@@ -9,3 +9,11 @@
 
 select * from 
 {{ source('globalmart', 'orders') }}
+
+{% if is_incremental() %}
+
+where orderdate >= (select max(orderdate) from {{ this }} )
+
+
+
+{% endif %}

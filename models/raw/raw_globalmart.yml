@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: raw_customers
+    description: "this is description"
     columns:
       - name: customerid
+        description: '{{ doc("customer_details")}}'
         tests:
           - not_null
           - unique
