@@ -12,6 +12,7 @@ sources:
     database: raw
     schema: globalmart
     tables:
+      - name: smallproductlist2
       - name: customer_example_2
         description: "This source is customer details from our application."
         loaded_at_field: updated_at
