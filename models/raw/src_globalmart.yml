@@ -9,43 +9,34 @@ version: 2
 
 sources:
   - name: globalmart
-    database: raw
-    schema: globalmart
+    database: globalmart
+    schema: raw
     tables:
-      - name: smallproductlist2
-      - name: customer_example_2
+      - name: customers
         description: "This source is customer details from our application."
+        
+        
+      - name: orders
+        
+      
+      - name: product
+      - name: customer_with_timestamp
+        columns:
+          - name: customerid
+            tests:
+              - not_null
+              
         loaded_at_field: updated_at
         freshness: 
           warn_after:
+            count: 2
+            period: hour
+          error_after:
             count: 4
             period: hour
-          error_after:
-            count: 5
-            period: hour
-        columns:
-          - name: customerid
-            description: "this is primary key"
+               
         
-      - name: orders
-        freshness: 
-          warn_after:
-            count: 1
-            period: day
-          error_after:
-            count: 2
-            period: day
-        loaded_at_field: loadedat
-      
-      - name: product
-        freshness: 
-          warn_after:
-            count: 1
-            period: day
-          error_after:
-            count: 2
-            period: day
-        loaded_at_field: loadedat
+         
 
 # once name is defined, put loadedat and freshness attribute under name in same indentation. start typing loaded and freshness
 

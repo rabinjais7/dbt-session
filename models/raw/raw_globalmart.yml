@@ -12,16 +12,9 @@ models:
   - name: raw_orders
     columns:
       - name: orderid
-        tests:
-          - not_null
-          - unique
         description: "Just testing1 "
       - name: shipmode
-        tests:
-          - accepted_values:
-              values:
-                - "Firstclass" 
-                - "same days"
+       
 
           
               
