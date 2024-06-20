@@ -1,0 +1,51 @@
+
+## how to write sources yml file 
+## version: 2
+## sources:
+## -name ( this is name of first source, it includes your database, schema and tables and columns)
+## once each table name is defined, under same indentation, start adding more attributes like freshness and loadedatfield
+
+version: 2
+
+sources:
+  - name: globalmart
+    database: globalmart
+    schema: raw
+    tables:
+      - name: customers
+        description: "This source is customer details from our application."
+        
+        
+      - name: orders
+        
+      
+      - name: product
+      - name: customer_with_timestamp
+        columns:
+          - name: customerid
+            tests:
+              - not_null
+              
+        loaded_at_field: updated_at
+        freshness: 
+          warn_after:
+            count: 2
+            period: hour
+          error_after:
+            count: 4
+            period: hour
+               
+        
+         
+
+# once name is defined, put loadedat and freshness attribute under name in same indentation. start typing loaded and freshness
+
+
+              
+
+      
+          
+            
+        
+
+      
